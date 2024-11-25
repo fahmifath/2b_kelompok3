@@ -1,5 +1,6 @@
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    NAME VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL
+CREATE TABLE Equipments (
+    id_equipment INT AUTO_INCREMENT PRIMARY KEY,
+    nama_alat VARCHAR(100) NOT NULL,
+    jenis_alat VARCHAR(50) NOT NULL,
+    kondisi VARCHAR(50) NOT NULL
 );
