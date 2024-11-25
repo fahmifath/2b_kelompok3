@@ -25,7 +25,7 @@ class MemberController {
         $jenis_kelamin = $_POST['jenis_kelamin'];
         $paket_langganan = $_POST['paket_langganan'];
         $this->memberModel->add($nama_member, $usia, $jenis_kelamin, $paket_langganan);
-        header('Location: /user/index');
+        header('Location: /member/index');
     }
     // Show the edit form with the user data
     public function edit($id) {
