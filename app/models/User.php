@@ -1,48 +1,52 @@
 <?php
-// app/models/User.php
+// app/models/kelas.php
 require_once '../config/database.php';
 
-class User {
+class Kelas {
     private $db;
 
     public function __construct() {
         $this->db = (new Database())->connect();
     }
 
-    public function getAllUsers() {
-        $query = $this->db->query("SELECT * FROM users");
+    public function getAllKelas() {
+        $query = $this->db->query("SELECT * FROM workout_classes");
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function find($id) {
-        $query = $this->db->prepare("SELECT * FROM users WHERE id = :id");
-        $query->bindParam(':id', $id, PDO::PARAM_INT);
+        $query = $this->db->prepare("SELECT * FROM workout_classes WHERE id_kelas = :id_kelas");
+        $query->bindParam(':id_kelas', $id_kelas, PDO::PARAM_INT);
         $query->execute();
         return $query->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function add($name, $email) {
-        $query = $this->db->prepare("INSERT INTO users (name, email) VALUES (:name, :email)");
-        $query->bindParam(':name', $name);
-        $query->bindParam(':email', $email);
+    public function add($name_kelas, $waktu, $pelatih, $kuota) {
+        $query = $this->db->prepare("INSERT INTO 2B_klp3 (nama_kelas, waktu, pelatih, kuota) VALUES (:nama_kelas, :waktu, :pelatih, :kuota)");
+        $query->bindParam(':nama_kelas', $name_kelas);
+        $query->bindParam(':waktu', $waktu);
+        $query->bindParam(':pelatih', $pelatih);
+        $query->bindParam(':kuota', $kuota);
         return $query->execute();
     }
 
-    // Update user data by ID
-    public function update($id, $data) {
-        $query = "UPDATE users SET name = :name, email = :email WHERE id = :id";
+    // Update kelas data by ID
+    public function update($id_kelas, $data) {
+        $query = "UPDATE 2B_klp3 SET nama_kelas = :nama_kelas, waktu = :waktu, pelatih = :pelatih, kuota = :kuota WHERE id_kelas = :id_kelas";
         $stmt = $this->db->prepare($query);
-        $stmt->bindParam(':name', $data['name']);
-        $stmt->bindParam(':email', $data['email']);
-        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':nama_kelas', $data['nama_kelas']);
+        $stmt->bindParam(':waktu', $data['waktu']);
+        $stmt->bindParam(':pelatih', $data['pelatih']);
+        $stmt->bindParam(':kuota', $data['kuota']);
+        $stmt->bindParam(':id_kelas', $id_kelas);
         return $stmt->execute();
     }
 
-    // Delete user by ID
-    public function delete($id) {
-        $query = "DELETE FROM users WHERE id = :id";
+    // Delete kelas by ID
+    public function delete($id_kelas) {
+        $query = "DELETE FROM workout_classes WHERE id_kelas = :id_kelas";
         $stmt = $this->db->prepare($query);
-        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':id_kelas', $id_kelas);
         return $stmt->execute();
     }
 }
