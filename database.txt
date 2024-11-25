@@ -1,5 +1,7 @@
 CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    NAME VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL
+    id_kelas INT(10) AUTO_INCREMENT PRIMARY KEY,
+    nama_kelas VARCHAR(100),
+    waktu TIMESTAMP,
+    pelatih VARCHAR(100),
+    kuota INT(10)
 );
