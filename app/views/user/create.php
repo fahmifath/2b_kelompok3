@@ -1,9 +1,14 @@
-<!-- app/views/user/create.php -->
-<h2>Tambah Pengguna Baru</h2>
+<!-- app/views/trainer/create.php -->
+<h2>Tambah Trainers Baru</h2>
 <form action="/user/store" method="POST">
-    <label for="name">Nama:</label>
-    <input type="text" name="name" id="name" required>
-    <label for="email">Email:</label>
-    <input type="email" name="email" id="email" required>
+    <label for="nama">Nama:</label>
+    <input type="text" name="name" id="name" required><br><br>
+
+    <label for="spesialisasi">Spesialisasi:</label>
+    <input type="spesialisasi" name="spesialisasi" id="spesialisasi" required><br><br>
+
+    <label for="jadwal">Jadwal:</label>
+    <input type="jadwal" name="jadwal" id="jadwal" required><br><br>
+
     <button type="submit">Simpan</button>
 </form>
