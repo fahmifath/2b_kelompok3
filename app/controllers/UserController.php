@@ -1,53 +1,55 @@
 <?php
-// app/controllers/UserController.php
-require_once '../app/models/User.php';
+// app/controllers/kelasController.php
+require_once '../app/models/kelas.php';
 
-class UserController {
-    private $userModel;
+class KelasController {
+    private $kelasModel;
 
     public function __construct() {
-        $this->userModel = new User();
+        $this->kelasModel = new Kelas();
     }
 
     public function index() {
-        $users = $this->userModel->getAllUsers();
-        require_once '../app/views/user/index.php';
+        $kelas = $this->kelasModel->getAllKelas();
+        require_once '../app/views/kelas/index.php';
 
     }
 
     public function create() {
-        require_once '../app/views/user/create.php';
+        require_once '../app/views/kelas/create.php';
     }
 
     public function store() {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $this->userModel->add($name, $email);
-        header('Location: /user/index');
+        $nama_kelas = $_POST['nama_kelas'];
+        $waktu = $_POST['waktu'];
+        $pelatih = $_POST['pelatih'];
+        $kuota = $_POST['kuota'];
+        $this->kelasModel->add($nama_kelas, $waktu, $pelatih, $kuota);
+        header('Location: /kelas/index');
     }
-    // Show the edit form with the user data
-    public function edit($id) {
-        $user = $this->userModel->find($id); // Assume find() gets user by ID
-        require_once __DIR__ . '/../views/user/edit.php';
+    // Show the edit form with the kelas data
+    public function edit($id_kelas) {
+        $kelas = $this->kelasModel->find($id_kelas); // Assume find() gets kelas by ID
+        require_once __DIR__ . '/../views/kelas/edit.php';
     }
 
     // Process the update request
-    public function update($id, $data) {
-        $updated = $this->userModel->update($id, $data);
+    public function update($id_kelas, $data) {
+        $updated = $this->kelasModel->update($id_kelas, $data);
         if ($updated) {
-            header("Location: /user/index"); // Redirect to user list
+            header("Location: /kelas/index"); // Redirect to kelas list
         } else {
-            echo "Failed to update user.";
+            echo "Failed to update kelas.";
         }
     }
 
     // Process delete request
-    public function delete($id) {
-        $deleted = $this->userModel->delete($id);
+    public function delete($id_kelas) {
+        $deleted = $this->kelasModel->delete($id_kelas);
         if ($deleted) {
-            header("Location: /user/index"); // Redirect to user list
+            header("Location: /kelas/index"); // Redirect to kelas list
         } else {
-            echo "Failed to delete user.";
+            echo "Failed to delete kelas.";
         }
     }
 }
