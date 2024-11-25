@@ -1,4 +1,4 @@
-<!-- app/views/user/edit.php -->
+<!-- app/views/trainer/edit.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
