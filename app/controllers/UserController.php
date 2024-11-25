@@ -1,22 +1,22 @@
 <?php
 // app/controllers/UserController.php
-require_once '../app/models/User.php';
+require_once '../app/models/Equipment.php';
 
 class UserController {
-    private $userModel;
+    private $equipment;
 
     public function __construct() {
-        $this->userModel = new User();
+        $this->equipment = new Equipment();
     }
 
     public function index() {
-        $users = $this->userModel->getAllUsers();
-        require_once '../app/views/user/index.php';
+        $users = $this->equipment->getAllUsers();
+        require_once '../app/views/equipment/index.php';
 
     }
 
     public function create() {
-        require_once '../app/views/user/create.php';
+        require_once '../app/views/equipment/create.php';
     }
 
     public function store() {
