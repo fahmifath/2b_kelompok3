@@ -1,22 +1,22 @@
 <?php
-// app/controllers/UserController.php
-require_once '../app/models/User.php';
+// app/controllers/TrainerController.php
+require_once '../app/models/Trainer.php';
 
 class UserController {
-    private $userModel;
+    private $trainer;
 
     public function __construct() {
-        $this->userModel = new User();
+        $this->trainer = new Trainers();
     }
 
     public function index() {
-        $users = $this->userModel->getAllUsers();
-        require_once '../app/views/user/index.php';
+        $users = $this->trainer->getAllUsers();
+        require_once '../app/views/trainer/index.php';
 
     }
 
     public function create() {
-        require_once '../app/views/user/create.php';
+        require_once '../app/views/trainer/create.php';
     }
 
     public function store() {
@@ -28,7 +28,7 @@ class UserController {
     // Show the edit form with the user data
     public function edit($id) {
         $user = $this->userModel->find($id); // Assume find() gets user by ID
-        require_once __DIR__ . '/../views/user/edit.php';
+        require_once __DIR__ . '/../views/trainer/edit.php';
     }
 
     // Process the update request
