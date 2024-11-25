@@ -1,21 +1,32 @@
-<!-- app/views/user/edit.php -->
+<!-- app/views/kelas/edit.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Edit User</title>
+    <title>Edit Kelas</title>
 </head>
 <body>
-    <h2>Edit User</h2>
-    <form action="/user/update/<?php echo $user['id']; ?>" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="<?php echo $user['name']; ?>" required>
+    <h2>Edit Kelas</h2>
+    <form action="/kelas/update/<?php echo $kelas['id_kelas']; ?>" method="POST">
+
+        <label for="kelas">Nama Kelas:</label>
+        <input type="text" id="kelas" name="kelas" value="<?php echo $kelas['nama_kelas']; ?>" required>
         <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="<?php echo $user['email']; ?>" required>
+
+        <label for="waktu">Waktu:</label>
+        <input type="datetime-local" id="waktu" name="waktu" value="<?php echo $kelas['waktu']; ?>" required>
         <br>
+
+        <label for="pelatih">Pelatih:</label>
+        <input type="text" id="pelatih" name="pelatih" value="<?php echo $kelas['pelatih']; ?>" required>
+        <br>
+
+        <label for="kuota">Email:</label>
+        <input type="number" id="kuota" name="kuota" value="<?php echo $kelas['kuota']; ?>" required>
+        <br>
+
         <button type="submit">Update</button>
     </form>
-    <a href="/user/index">Back to List</a>
+    <a href="/kelas/index">Back to List</a>
 </body>
 </html>
