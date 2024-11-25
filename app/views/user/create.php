@@ -1,9 +1,20 @@
-<!-- app/views/user/create.php -->
-<h2>Tambah Pengguna Baru</h2>
-<form action="/user/store" method="POST">
-    <label for="name">Nama:</label>
-    <input type="text" name="name" id="name" required>
-    <label for="email">Email:</label>
-    <input type="email" name="email" id="email" required>
+<!-- app/views/kelas/create.php -->
+<h2>Tambah Kelas Baru</h2>
+<form action="/kelas/store" method="POST">
+
+    <input type="hidden" name="id_kelas" id="id_kelas">
+
+    <label for="kelas">Nama Kelas:</label>
+    <input type="text" name="kelas" id="kelas" required>
+
+    <label for="waktu">Waktu:</label>
+    <input type="datetime-local" name="waktu" id="waktu" required>
+    
+    <label for="pelatih">Pelatih:</label>
+    <input type="text" name="pelatih" id="pelatih" required>
+
+    <label for="kuota">Kuota:</label>
+    <input type="number" name="kuota" id="kuota" required>
+
     <button type="submit">Simpan</button>
 </form>
