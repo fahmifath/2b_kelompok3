@@ -22,6 +22,6 @@
         <br>
         <button type="submit">Update</button>
     </form>
-    <a href="/user/index">Back to List</a>
+    <a href="/member/index">Back to List</a>
 </body>
 </html>

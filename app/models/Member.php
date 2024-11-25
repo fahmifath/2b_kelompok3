@@ -32,7 +32,7 @@ class Member {
 
     // Update user data by ID
     public function update($id, $data) {
-        $query = "UPDATE members SET nama = :nama_member, usia = :usia, jenis_kelamin = :jenis_kelamin, paket_langganan = :paket_langganan WHERE id_member = :id";
+        $query = "UPDATE members SET nama_member = :nama_member, usia = :usia, jenis_kelamin = :jenis_kelamin, paket_langganan = :paket_langganan WHERE id_member = :id";
         $stmt = $this->db->prepare($query);
         $stmt->bindParam(':nama_member', $data['nama_member']);
         $stmt->bindParam(':usia', $data['usia']);
