@@ -1,7 +1,7 @@
 <?php
 // routes.php
 
-require_once 'app/controllers/UserController.php';
+require_once 'app/controllers/EquipmentController.php';
 
 $controller = new UserController();
 $url = $_SERVER['REQUEST_URI'];
