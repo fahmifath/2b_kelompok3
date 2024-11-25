@@ -1,5 +1,7 @@
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    NAME VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL
-);
+CREATE TABLE members (
+    id_member INT AUTO_INCREMENT PRIMARY KEY,
+    nama_member VARCHAR(100) NOT NULL,
+    usia INT(3) NOT NULL,
+    jenis_kelamin VARCHAR(20) NOT NULL,
+    paket_langganan VARCHAR(20) NOT NULL
+); 
