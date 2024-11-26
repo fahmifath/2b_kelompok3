@@ -1,25 +1,25 @@
 <?php
 // routes.php
 
-require_once 'app/controllers/KelasController.php';
+require_once 'app/controllers/WorkoutClassController.php';
 
-$controller = new KelasController();
+$controller = new WorkoutClassController();
 $url = $_SERVER['REQUEST_URI'];
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 
-if ($url == '/kelas/index' || $url == '/') {
+if ($url == '/WorkoutClass/index' || $url == '/') {
     $controller->index();
-} elseif ($url == '/kelas/create' && $requestMethod == 'GET') {
+} elseif ($url == '/WorkoutClass/create' && $requestMethod == 'GET') {
     $controller->create();
-} elseif ($url == '/kelas/store' && $requestMethod == 'POST') {
+} elseif ($url == '/WorkoutClass/store' && $requestMethod == 'POST') {
     $controller->store();
-} elseif (preg_match('/\/kelas\/edit\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
+} elseif (preg_match('/\/WorkoutClass\/edit\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $userId = $matches[1];
     $controller->edit($userId);
-} elseif (preg_match('/\/kelas\/update\/(\d+)/', $url, $matches) && $requestMethod == 'POST') {
+} elseif (preg_match('/\/WorkoutClass\/update\/(\d+)/', $url, $matches) && $requestMethod == 'POST') {
     $userId = $matches[1];
     $controller->update($userId, $_POST);
-} elseif (preg_match('/\/kelas\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
+} elseif (preg_match('/\/WorkoutClass\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $userId = $matches[1];
     $controller->delete($userId);
 } else {
