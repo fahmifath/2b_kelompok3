@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>Edit Kelas</h2>
-    <form action="/WorkoutClass/update/<?php echo $kelass['id_workout_class']; ?>" method="POST">
+    <form action="/workout_class/update/<?php echo $kelass['id_workout_class']; ?>" method="POST">
     <table>
         <tr>
             <td><label for="nama_kelas">Nama Kelas:</label></td>
@@ -35,6 +35,6 @@
         </tr>
     </table>
     </form>
-    <a href="/WorkoutClass/index">Back to List</a>
+    <a href="/workout_class/index">Back to List</a>
 </body>
 </html>

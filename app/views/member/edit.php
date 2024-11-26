@@ -1,4 +1,4 @@
-<!-- app/views/user/edit.php -->
+<!-- app/views/member/edit.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +9,7 @@
     <h2>Edit Member</h2>
     <form action="/member/update/<?php echo $member['id_member']; ?>" method="POST">
         <label for="nama_member">Nama member:</label>
-        <input type="text" id="nama_member" name="nama_member" value="<?=$member['nama_member'];?>" required>
+        <input type="text" id="nama_member" name="nama_member" value="<?php echo $member['nama_member']; ?>" required>
         <br>
         <label for="usia">Usia:</label>
         <input type="text" id="usia" name="usia" value="<?php echo $member['usia']; ?>" required>

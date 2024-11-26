@@ -2,6 +2,7 @@
 // app/models/Member.php
 require_once '../config/database.php';
 
+//class member model
 class Member {
     private $db;
 

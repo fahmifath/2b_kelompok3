@@ -1,6 +1,6 @@
 <!-- app/views/kelas/create.php -->
 <h2>Tambah Kelas Baru</h2>
-<form action="/WorkoutClass/store" method="POST">
+<form action="/workout_class/store" method="POST">
     <table>
         <tr>
             <td><label for="nama_kelas">Nama Kelas:</label></td>
