@@ -1,3 +1,5 @@
+
+
 CREATE TABLE members (
     id_member INT AUTO_INCREMENT PRIMARY KEY,
     nama_member VARCHAR(100) NOT NULL,
@@ -14,5 +16,9 @@ CREATE TABLE workout_classes (
     kuota INT(10)
 );
 
-
-
+CREATE TABLE equipments (
+    id_equipment INT AUTO_INCREMENT PRIMARY KEY,
+    nama_alat VARCHAR(100) NOT NULL,
+    jenis_alat VARCHAR(50) NOT NULL,
+    kondisi VARCHAR(50) NOT NULL
+);
