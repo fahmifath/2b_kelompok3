@@ -5,3 +5,14 @@ CREATE TABLE members (
     jenis_kelamin VARCHAR(20) NOT NULL,
     paket_langganan VARCHAR(20) NOT NULL
 ); 
+
+CREATE TABLE workout_classes (
+    id_workuout_class INT(10) AUTO_INCREMENT PRIMARY KEY,
+    nama_kelas VARCHAR(100),
+    waktu TIMESTAMP,
+    pelatih VARCHAR(100),
+    kuota INT(10)
+);
+
+
+
