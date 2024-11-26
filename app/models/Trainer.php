@@ -2,14 +2,14 @@
 // app/models/User.php
 require_once '../config/database.php';
 
-class Trainers {
+class Trainer {
     private $db;
 
     public function __construct() {
         $this->db = (new Database())->connect();
     }
 
-    public function getAllUsers() {
+    public function getAllData() {
         $query = $this->db->query("SELECT * FROM trainers");
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }

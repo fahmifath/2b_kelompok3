@@ -2,15 +2,15 @@
 // app/controllers/TrainerController.php
 require_once '../app/models/Trainer.php';
 
-class UserController {
+class TrainerController {
     private $trainer;
 
     public function __construct() {
-        $this->trainer = new Trainers();
+        $this->trainer = new Trainer();
     }
 
     public function index() {
-        $users = $this->trainer->getAllUsers();
+        $trainers = $this->trainer->getAllData();
         require_once '../app/views/trainer/index.php';
 
     }
@@ -20,34 +20,32 @@ class UserController {
     }
 
     public function store() {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $this->userModel->add($name, $email);
-        header('Location: /user/index');
+        $nama = $_POST['nama_trainer'];
+        $spesialisasi = $_POST['spesialisasi'];
+        $jadwal = $_POST['jadwal'];
+        $this->trainer->add($nama, $spesialisasi, $jadwal);
+        header('Location: /trainer/index');
+        // var_dump($nama, $spesialisasi, $jadwal);/\
     }
-    // Show the edit form with the user data
+
     public function edit($id) {
-        $user = $this->userModel->find($id); // Assume find() gets user by ID
-        require_once __DIR__ . '/../views/trainer/edit.php';
+        $trainers = $this->trainer->find($id);
+        require_once '../app/views/trainer/edit.php';
     }
 
-    // Process the update request
     public function update($id, $data) {
-        $updated = $this->userModel->update($id, $data);
-        if ($updated) {
-            header("Location: /user/index"); // Redirect to user list
-        } else {
-            echo "Failed to update user.";
-        }
+        $data = [
+            'nama' => $_POST['nama_trainer'],
+            'spesialisasi' => $_POST['spesialisasi'],
+            'jadwal' => $_POST['jadwal']
+        ];
+        $this->trainer->update($id, $data);
+        header('Location: /trainer/index');
+        // var_dump($data);
     }
 
-    // Process delete request
     public function delete($id) {
-        $deleted = $this->userModel->delete($id);
-        if ($deleted) {
-            header("Location: /user/index"); // Redirect to user list
-        } else {
-            echo "Failed to delete user.";
-        }
+        $this->trainer->delete($id);
+        header('Location: /trainer/index');
     }
 }
