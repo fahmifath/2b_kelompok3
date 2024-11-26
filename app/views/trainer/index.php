@@ -1,12 +1,12 @@
-<!-- app/views/user/index.php -->
-<h2>Daftar Pengguna</h2>
-<a href="/user/create">Tambah Pengguna Baru</a>
+<!-- app/views/trainer/index.php -->
+<h2>Daftar Trainers</h2>
+<a href="/trainer/create">Tambah Trainers Baru</a>
 <ul>
-    <?php foreach ($users as $user): ?>
+    <?php foreach ($trainers as $trainer): ?>
         <div>
-            <p><?= htmlspecialchars($user['name']) ?> - <?= htmlspecialchars($user['email']) ?>
-            <a href="/user/edit/<?php echo $user['id']; ?>">Edit</a> |
-            <a href="/user/delete/<?php echo $user['id']; ?>" onclick="return confirm('Are you sure?')">Delete</a>
+            <p><?= htmlspecialchars($trainer['nama_trainer']) ?> - <?= htmlspecialchars($trainer['spesialisasi']) ?> - <?= htmlspecialchars($trainer['jadwal']) ?>
+            <a href="/trainer/edit/<?php echo $trainer['id_trainer']; ?>">Edit</a> |
+            <a href="/trainer/delete/<?php echo $trainer['id_trainer']; ?>" onclick="return confirm('Are you sure?')">Delete</a>
             </p>
         </div>
     <?php endforeach; ?>
