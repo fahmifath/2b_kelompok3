@@ -3,23 +3,23 @@
 
 require_once 'app/controllers/EquipmentController.php';
 
-$controller = new UserController();
+$controller = new EquipmentController();
 $url = $_SERVER['REQUEST_URI'];
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 
-if ($url == '/user/index' || $url == '/') {
+if ($url == '/equipment/index' || $url == '/') {
     $controller->index();
-} elseif ($url == '/user/create' && $requestMethod == 'GET') {
+} elseif ($url == '/equipment/create' && $requestMethod == 'GET') {
     $controller->create();
-} elseif ($url == '/user/store' && $requestMethod == 'POST') {
+} elseif ($url == '/equipment/store' && $requestMethod == 'POST') {
     $controller->store();
-} elseif (preg_match('/\/user\/edit\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
+} elseif (preg_match('/\/equipment\/edit\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $userId = $matches[1];
     $controller->edit($userId);
-} elseif (preg_match('/\/user\/update\/(\d+)/', $url, $matches) && $requestMethod == 'POST') {
+} elseif (preg_match('/\/equipment\/update\/(\d+)/', $url, $matches) && $requestMethod == 'POST') {
     $userId = $matches[1];
     $controller->update($userId, $_POST);
-} elseif (preg_match('/\/user\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
+} elseif (preg_match('/\/equipment\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $userId = $matches[1];
     $controller->delete($userId);
 } else {
