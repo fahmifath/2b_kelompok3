@@ -2,6 +2,7 @@
 // app/controllers/UserController.php
 require_once '../app/models/Member.php';
 
+//class member controller
 class MemberController {
     private $memberModel;
 

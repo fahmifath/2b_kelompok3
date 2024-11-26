@@ -1,4 +1,4 @@
-<!-- app/views/user/create.php -->
+<!-- app/views/member/create.php -->
 <h2>Tambah Member Baru</h2>
 <form action="/member/store" method="POST">
     <label for="name">Nama member:</label>
