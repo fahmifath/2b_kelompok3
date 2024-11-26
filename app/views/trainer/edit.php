@@ -7,15 +7,18 @@
 </head>
 <body>
     <h2>Edit User</h2>
-    <form action="/user/update/<?php echo $user['id']; ?>" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="<?php echo $user['name']; ?>" required>
+    <form action="/trainer/update/<?php echo $trainers['id_trainer']; ?>" method="POST">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="nama_trainer" value="<?php echo $trainers['nama_trainer']; ?>" required>
         <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="<?php echo $user['email']; ?>" required>
+        <label for="spesialisasi">Spesialisasi:</label>
+        <input type="text" id="spesialisasi" name="spesialisasi" value="<?php echo $trainers['spesialisasi']; ?>" required>
+        <br>
+        <label for="jadwal">Jadwal:</label>
+        <input type="text" id="jadwal" name="jadwal" value="<?php echo $trainers['jadwal']; ?>" required>
         <br>
         <button type="submit">Update</button>
     </form>
-    <a href="/user/index">Back to List</a>
+    <a href="/trainer/index">Back to List</a>
 </body>
 </html>
