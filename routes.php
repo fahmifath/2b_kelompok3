@@ -3,8 +3,10 @@
 require_once 'app/controllers/WorkoutClassController.php';
 require_once 'app/controllers/EquipmentController.php';
 require_once 'app/controllers/TrainerController.php';
+require_once 'app/controllers/MemberController.php';
 
-
+//inisialisasi object member cotroller
+$memberController = new MemberController();
 $equipmentController = new EquipmentController();
 $url = $_SERVER['REQUEST_URI'];
 $requestMethod = $_SERVER['REQUEST_METHOD'];
