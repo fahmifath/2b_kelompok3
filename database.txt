@@ -1,6 +1,34 @@
+CREATE TABLE members (
+    id_member INT AUTO_INCREMENT PRIMARY KEY,
+    nama_member VARCHAR(100) NOT NULL,
+    usia INT(3) NOT NULL,
+    jenis_kelamin VARCHAR(20) NOT NULL,
+    paket_langganan VARCHAR(20) NOT NULL
+); 
+
+CREATE TABLE workout_classes (
+    id_workuout_class INT(10) AUTO_INCREMENT PRIMARY KEY,
+    nama_kelas VARCHAR(100),
+    waktu TIMESTAMP,
+    pelatih VARCHAR(100),
+    kuota INT(10)
+);
+
+CREATE TABLE equipments (
+    id_equipment INT AUTO_INCREMENT PRIMARY KEY,
+    nama_alat VARCHAR(100) NOT NULL,
+    jenis_alat VARCHAR(50) NOT NULL,
+    kondisi VARCHAR(50) NOT NULL
+);
+
 CREATE TABLE trainers (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nama VARCHAR(100) NOT NULL,
     spesialisasi VARCHAR(20) NOT NULL
     jadwal VARCHAR(30) NOT NULL
+<<<<<<< HEAD
 );
+=======
+);
+
+>>>>>>> 7a2db40b075f6e92e4d2e3eb502b12419d3af639
