@@ -3,6 +3,7 @@
 
 require_once 'app/controllers/MemberController.php';
 
+//inisialisasi object member cotroller
 $memberController = new MemberController();
 $url = $_SERVER['REQUEST_URI'];
 $requestMethod = $_SERVER['REQUEST_METHOD'];
