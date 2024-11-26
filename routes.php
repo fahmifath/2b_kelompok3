@@ -2,6 +2,8 @@
 // routes
 require_once 'app/controllers/WorkoutClassController.php';
 require_once 'app/controllers/EquipmentController.php';
+require_once 'app/controllers/TrainerController.php';
+
 
 $equipmentController = new EquipmentController();
 $url = $_SERVER['REQUEST_URI'];
@@ -46,6 +48,4 @@ if ($url == '/workout_class/index' || $url == '/') {
     http_response_code(404);
     echo "404 Not Found";
 }
-
-
 
