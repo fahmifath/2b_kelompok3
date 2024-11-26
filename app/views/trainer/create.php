@@ -12,4 +12,7 @@
     <input type="text" name="jadwal" id="jadwal" required><br><br>
 
     <button type="submit">Simpan</button>
+
 </form>
+<a href="/workout_class/index">Back to List</a>
+

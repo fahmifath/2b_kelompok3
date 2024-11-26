@@ -10,7 +10,7 @@ class TrainerController {
     }
 
     public function index() {
-        $trainers = $this->trainer->getAll();
+        $trainers = $this->trainer->getAllData();
         require_once '../app/views/trainer/index.php';
 
     }

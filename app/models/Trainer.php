@@ -9,7 +9,7 @@ class Trainer {
         $this->db = (new Database())->connect();
     }
 
-    public function getAll() {
+    public function getAllData() {
         $query = $this->db->query("SELECT * FROM trainers");
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }    

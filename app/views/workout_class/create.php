@@ -24,3 +24,5 @@
         </tr>
     </table>
 </form>
+<a href="/workout_class/index">Back to List</a>
+
