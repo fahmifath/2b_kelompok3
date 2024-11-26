@@ -3,25 +3,25 @@
 
 require_once 'app/controllers/WorkoutClassController.php';
 
-$controller = new WorkoutClassController();
+$workoutClassController = new WorkoutClassController();
 $url = $_SERVER['REQUEST_URI'];
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 
 if ($url == '/WorkoutClass/index' || $url == '/') {
-    $controller->index();
+    $workoutClassController->index();
 } elseif ($url == '/WorkoutClass/create' && $requestMethod == 'GET') {
-    $controller->create();
+    $workoutClassController->create();
 } elseif ($url == '/WorkoutClass/store' && $requestMethod == 'POST') {
-    $controller->store();
+    $workoutClassController->store();
 } elseif (preg_match('/\/WorkoutClass\/edit\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $userId = $matches[1];
-    $controller->edit($userId);
+    $workoutClassController->edit($userId);
 } elseif (preg_match('/\/WorkoutClass\/update\/(\d+)/', $url, $matches) && $requestMethod == 'POST') {
     $userId = $matches[1];
-    $controller->update($userId, $_POST);
+    $workoutClassController->update($userId, $_POST);
 } elseif (preg_match('/\/WorkoutClass\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $userId = $matches[1];
-    $controller->delete($userId);
+    $workoutClassController->delete($userId);
 } else {
     http_response_code(404);
     echo "404 Not Found";

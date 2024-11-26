@@ -29,7 +29,7 @@ class WorkoutClassController {
     }
     // Show the edit form with the kelas data
     public function edit($id_kelas) {
-        $kelas = $this->kelasModel->find($id_kelas); // Assume find() gets kelas by ID
+        $kelass = $this->kelasModel->find($id_kelas); // Assume find() gets kelas by ID
         require_once __DIR__ . '/../views/WorkoutClass/edit.php';
     }
 

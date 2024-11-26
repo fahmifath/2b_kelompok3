@@ -16,7 +16,7 @@ class WorkoutClass {
 
     public function find($id) {
         $query = $this->db->prepare("SELECT * FROM workout_classes WHERE id_workout_class = :id_kelas");
-        $query->bindParam(':id_kelas', $id_kelas, PDO::PARAM_INT);
+        $query->bindParam(':id_kelas', $id, PDO::PARAM_INT);
         $query->execute();
         return $query->fetch(PDO::FETCH_ASSOC);
     }
