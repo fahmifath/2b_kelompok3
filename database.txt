@@ -26,5 +26,9 @@ CREATE TABLE trainers (
     nama VARCHAR(100) NOT NULL,
     spesialisasi VARCHAR(20) NOT NULL
     jadwal VARCHAR(30) NOT NULL
+<<<<<<< HEAD
+);
+=======
 );
 
+>>>>>>> 7a2db40b075f6e92e4d2e3eb502b12419d3af639
