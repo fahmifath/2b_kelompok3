@@ -1,0 +1,8 @@
+.banner {
+    background: url("https://www.healthdigest.com/img/gallery/things-your-gym-doesnt-want-you-to-know/most-memberships-go-unused-1633966377.jpg")
+      no-repeat center center;
+    background-size: cover;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    color: #fff;
+  }
