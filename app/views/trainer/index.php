@@ -1,11 +1,11 @@
 <!-- app/views/trainer/index.php -->
 <div class="container mt-5 pt-5">
     <h2 class="text-center mt-4 pb-2" style="margin-top: 100px;">Daftar Trainer</h2>
-    <a class="btn btn-success mb-3" href="/trainer/create">+ Tambah Member Baru</a>
+    <a style="width: 190px;" class="btn btn-success mb-3" href="/trainer/create">Tambah Trainer Baru</a>
     <table class="table table-striped table-bordered table-hover">
     <thead>
             <tr>
-                <th>No.</th>
+                <th style="width: 80px;">No.</th>
                 <th>Nama Trainer</th>
                 <th>Spesialisasi</th>
                 <th>Jadwal</th>

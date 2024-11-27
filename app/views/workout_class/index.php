@@ -1,12 +1,11 @@
 <!-- app/views/kelas/index.php -->
-
-<div class="container mt-5">
-    <h2 class="text-center mt-5 pb-2 pt-5" style="margin-top: 100px;">Daftar Kelas</h2>
-    <a href="/workout_class/create" class="btn btn-success mb-3">Tambah Kelas Baru</a>
+<div class="container mt-5 pt-5">
+    <h2 class="text-center mt-4 pb-2" style="margin-top: 100px;">Daftar Kelas</h2>
+    <a style="width: 190px;" href="/workout_class/create" class="btn btn-success mb-3">Tambah Kelas Baru</a>
     <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
-                <th>No.</th>
+                <th style="width: 80px;">No.</th>
                 <th>Nama Kelas</th>
                 <th>Waktu</th>
                 <th>Pelatih</th>

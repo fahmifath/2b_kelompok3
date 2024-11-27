@@ -1,11 +1,11 @@
 <!-- app/views/user/index.php -->
 <div class="container mt-5 pt-5">
     <h2 class="text-center mt-4 pb-2" style="margin-top: 100px;">Daftar Alat Gym</h2>
-    <a href="/equipment/create" class="btn btn-success mb-3">Tambah Alat Baru</a>
+    <a style="width: 190px;" href="/equipment/create" class="btn btn-success mb-3">Tambah Alat Baru</a>
     <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
-                <th>No.</th>
+                <th style="width: 80px;">No.</th>
                 <th>Nama Alat</th>
                 <th>Jenis Alat</th>
                 <th>Kondisi</th>
