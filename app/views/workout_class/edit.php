@@ -1,31 +1,33 @@
 <!-- app/views/kelas/edit.php -->
-    <h2>Edit Kelas</h2>
+<div class="container center mt-5" style="width: 700px;">
+    <h2 class="mt-5 text-center pb-2 pt-5">Edit Kelas</h2>
     <form action="/workout_class/update/<?php echo $kelass['id_workout_class']; ?>" method="POST">
-    <table>
-        <tr>
-            <td><label for="nama_kelas">Nama Kelas:</label></td>
-            <td><input type="text" id="nama_kelas" name="nama_kelas" value="<?php echo $kelass['nama_kelas']; ?>" required></td>
-        </tr>
+            <div class="mb-3">
+                <label for="nama_kelas" class="form-label">Nama Kelas:</label>
+                <input type="text" class="form-control" id="nama_kelas" name="nama_kelas" value="<?php echo $kelass['nama_kelas']; ?>" aria-describedby="emailHelp" required>
+            </div>
 
-        <tr>
-            <td><label for="waktu">Waktu:</label></td>
-            <td><input type="datetime-local" id="waktu" name="waktu" value="<?php echo $kelass['waktu']; ?>" required></td>
-        </tr>
+            <div class="mb-3">
+                <label for="waktu" class="form-label">Waktu:</label>
+                <input type="datetime-local" class="form-control" id="waktu" name="waktu" value="<?php echo $kelass['waktu']; ?>" aria-describedby="emailHelp" required>
+            </div>
 
-        <tr>
-            <td><label for="pelatih">Pelatih:</label></td>
-            <td><input type="text" id="pelatih" name="pelatih" value="<?php echo $kelass['pelatih']; ?>" required></td>
-        </tr>
+            <div class="mb-3">
+                <label for="pelatih" class="form-label">Pelatih:</label>
+                <input type="text" id="pelatih" name="pelatih" value="<?php echo $kelass['pelatih']; ?>" class="form-control" aria-describedby="emailHelp" required>
+            </div>
 
-        <tr>
-            <td><label for="kuota">Kuota:</label></td>
-            <td><input type="number" id="kuota" name="kuota" value="<?php echo $kelass['kuota'];?>" required></td>
-        </tr>
+            <div class="mb-3">
+                <label for="kuota" class="form-label">Kuota:</label>
+                <input type="number" class="form-control" id="kuota" name="kuota" value="<?php echo $kelass['kuota']; ?>" aria-describedby="emailHelp" required>
+            </div>
 
-        <tr>
-            <td><input type="hidden" name="id_kelas" value="<?php echo $kelass['id_workout_class']; ?>"></td>
-            <td><button type="submit">Update</button></td>
-        </tr>
-    </table>
+            <div class="mb-3 d-flex justify-content-between">
+                <input type="hidden" name="id_kelas" value="<?php echo $kelass['id_workout_class']; ?>">
+                <button type="submit" class="btn btn-success">Update</button>
+                <a href="/workout_class/index" class="btn btn-primary">Back to List</a>
+            </div>
+        </table>
     </form>
-    <a href="/workout_class/index">Back to List</a>
+    
+</div>
