@@ -1,27 +1,26 @@
 <!-- app/views/member/edit.php -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Edit Member</title>
-</head>
-<body>
-    <h2>Edit Member</h2>
+<div class="container center mt-5" style="width: 700px;">
+    <h2 class="mt-5 text-center">Edit Member</h2>
     <form action="/member/update/<?php echo $member['id_member']; ?>" method="POST">
-        <label for="nama_member">Nama member:</label>
-        <input type="text" id="nama_member" name="nama_member" value="<?php echo $member['nama_member']; ?>" required>
-        <br>
-        <label for="usia">Usia:</label>
-        <input type="text" id="usia" name="usia" value="<?php echo $member['usia']; ?>" required>
-        <br>
-        <label for="jenis_kelamin">Jenis kelamin:</label>
-        <input type="text" id="jenis_kelamin" name="jenis_kelamin" value="<?php echo $member['jenis_kelamin']; ?>" required>
-        <br>
-        <label for="paket_langganan">Paket langganan:</label>
-        <input type="text" id="paket_langganan" name="paket_langganan" value="<?php echo $member['paket_langganan']; ?>" required>
-        <br>
-        <button type="submit">Update</button>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nama</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="nama_member" value="<?=$member['nama_member']?>" aria-describedby="emailHelp" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail11" class="form-label">Usia</label>
+            <input type="text" class="form-control" id="exampleInputEmail11" name="usia" value="<?=$member['usia']?>" aria-describedby="emailHelp" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail12" class="form-label">Jenis kelamin</label>
+            <input type="text" class="form-control" id="exampleInputEmail12" name="jenis_kelamin" value="<?=$member['jenis_kelamin']?>" aria-describedby="emailHelp" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail13" class="form-label">Paket langganan</label>
+            <input type="text" class="form-control" id="exampleInputEmail13" name="paket_langganan" value="<?=$member['paket_langganan']?>" aria-describedby="emailHelp" required>
+        </div>
+        <div class="mb-3 d-flex justify-content-between">
+            <button type="submit" class="btn btn-success">Ubah</button>
+            <a class="btn btn-primary" href="/member/index">Back to List</a>
+        </div>
     </form>
-    <a href="/member/index">Back to List</a>
-</body>
-</html>
+</div>
