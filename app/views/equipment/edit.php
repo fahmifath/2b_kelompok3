@@ -1,11 +1,4 @@
 <!-- app/views/user/edit.php -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Edit Equipment</title>
-</head>
-<body>
     <h2>Edit Equipment</h2>
     <form action="/equipment/update/<?php echo $equipments['id_equipment']; ?>" method="POST">
         <label for="nama_alat">Nama Alat:</label>

@@ -12,5 +12,5 @@
             <a href="/trainer/delete/<?php echo $trainer['id_trainer']; ?>" onclick="return confirm('Are you sure?')">Delete</a>
             </p>
         </div>
-    <?php endforeach; ?>
+    <?php endforeach;?>
 </ul>
