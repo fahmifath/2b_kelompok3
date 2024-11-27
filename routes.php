@@ -19,8 +19,7 @@ if ($url == '/' || empty($url)) {
     $homeController->index(); // Arahkan ke HomeController method index
 } elseif ($url == '/home/index' || $url == '/') {
     $homeController->index();
-}
-  elseif ($url == '/member/index' || $url == '/') {
+} elseif ($url == '/member/index' || $url == '/') {
     $memberController->index();
 } elseif ($url == '/member/create' && $requestMethod == 'GET') {
     $memberController->create();
@@ -69,7 +68,6 @@ if ($url == '/' || empty($url)) {
 } elseif (preg_match('/\/workout_class\/delete\/(\d+)/', $url, $matches) && $requestMethod == 'GET') {
     $id_kelas = $matches[1];
     $workoutClassController->delete($id_kelas);
-
 
 
 }  elseif ($url == '/trainer/index' || $url == '/') {
