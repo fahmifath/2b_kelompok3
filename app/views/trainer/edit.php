@@ -1,11 +1,4 @@
 <!-- app/views/trainer/edit.php -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Edit User</title>
-</head>
-<body>
     <h2>Edit User</h2>
     <form action="/trainer/update/<?php echo $trainers['id_trainer']; ?>" method="POST">
         <label for="name">Nama:</label>
@@ -20,5 +13,3 @@
         <button type="submit">Update</button>
     </form>
     <a href="/trainer/index">Back to List</a>
-</body>
-</html>

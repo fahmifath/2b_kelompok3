@@ -1,11 +1,4 @@
 <!-- app/views/kelas/edit.php -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Edit Kelas</title>
-</head>
-<body>
     <h2>Edit Kelas</h2>
     <form action="/workout_class/update/<?php echo $kelass['id_workout_class']; ?>" method="POST">
     <table>
@@ -36,5 +29,3 @@
     </table>
     </form>
     <a href="/workout_class/index">Back to List</a>
-</body>
-</html>

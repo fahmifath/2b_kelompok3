@@ -1,11 +1,13 @@
 <?php
 // routes
+require_once 'app/controllers/HomeController.php';
 require_once 'app/controllers/WorkoutClassController.php';
 require_once 'app/controllers/EquipmentController.php';
 require_once 'app/controllers/TrainerController.php';
 require_once 'app/controllers/MemberController.php';
 
 //inisialisasi object member cotroller
+$homeController = new HomeController();
 $memberController = new MemberController();
 $equipmentController = new EquipmentController();
 $workoutClassController = new WorkoutClassController();
@@ -13,8 +15,12 @@ $trainerController = new TrainerController();
 
 $url = $_SERVER['REQUEST_URI'];
 $requestMethod = $_SERVER['REQUEST_METHOD'];
-
-if ($url == '/member/index' || $url == '/') {
+if ($url == '/' || empty($url)) {
+    $homeController->index(); // Arahkan ke HomeController method index
+} elseif ($url == '/home/index' || $url == '/') {
+    $homeController->index();
+}
+  elseif ($url == '/member/index' || $url == '/') {
     $memberController->index();
 } elseif ($url == '/member/create' && $requestMethod == 'GET') {
     $memberController->create();
@@ -83,5 +89,5 @@ if ($url == '/member/index' || $url == '/') {
     $trainerController->delete($id_kelas);
 } else {
     http_response_code(404);
-    echo "404 Not Found";
+    echo "404 Not Found";
 }
