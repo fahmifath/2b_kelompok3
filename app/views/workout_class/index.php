@@ -1,4 +1,5 @@
 <!-- app/views/kelas/index.php -->
+<?php require_once'../app/views/templates/nav.php' ?>
 <div class="container mt-5 pt-5">
     <h2 class="text-center mt-4 pb-2" style="margin-top: 100px;">Daftar Kelas</h2>
     <a style="width: 190px;" href="../workout_class/create" class="btn btn-success mb-3">Tambah Kelas Baru</a>
