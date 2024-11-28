@@ -1,12 +1,12 @@
 <!-- app/views/kelas/index.php -->
-
-<div class="container mt-5">
-    <h2 class="text-center mt-5 pb-2 pt-5" style="margin-top: 100px;">Daftar Kelas</h2>
-    <a href="/workout_class/create" class="btn btn-success mb-3">Tambah Kelas Baru</a>
+<?php require_once'../app/views/templates/nav.php' ?>
+<div class="container mt-5 pt-5">
+    <h2 class="text-center mt-4 pb-2" style="margin-top: 100px;">Daftar Kelas</h2>
+    <a style="width: 190px;" href="../workout_class/create" class="btn btn-success mb-3">Tambah Kelas Baru</a>
     <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
-                <th>No.</th>
+                <th style="width: 80px;">No.</th>
                 <th>Nama Kelas</th>
                 <th>Waktu</th>
                 <th>Pelatih</th>
@@ -24,8 +24,8 @@
                     <td><?= htmlspecialchars($class['pelatih']) ?></td>
                     <td><?= htmlspecialchars($class['kuota']) ?></td>
                     <td class="d-flex justify-content-center">
-                        <a style="width: 70px;" class="btn btn-warning btn-sm me-2" href="/workout_class/edit/<?php echo $class['id_workout_class']; ?>">Edit</a>
-                        <a style="width: 70px;" class="btn btn-danger btn-sm" href="/workout_class/delete/<?php echo $class['id_workout_class']; ?>" onclick="return confirm('Are you sure?')">Delete</a>
+                        <a style="width: 70px;" class="btn btn-warning btn-sm me-2" href="../workout_class/edit/<?php echo $class['id_workout_class']; ?>">Edit</a>
+                        <a style="width: 70px;" class="btn btn-danger btn-sm" href="../workout_class/delete/<?php echo $class['id_workout_class']; ?>" onclick="return confirm('Are you sure?')">Delete</a>
                     </td>
                 </tr>
             <?php $no++;

@@ -1,6 +1,6 @@
 <!-- app/views/member/create.php -->
 <div class="container center mt-5" style="width: 700px;">
-    <h2 class="mt-5 text-center">Tambah Member Baru</h2>
+    <h2 class="mt-5 text-center pb-2 pt-5">Tambah Member Baru</h2>
     <form action="/member/store" method="POST">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nama</label>
