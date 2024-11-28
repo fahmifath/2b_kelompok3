@@ -1,4 +1,5 @@
 <!-- app/views/trainer/index.php -->
+<?php require_once'../app/views/templates/nav.php' ?>
 <div class="container mt-5 pt-5">
     <h2 class="text-center mt-4 pb-2" style="margin-top: 100px;">Daftar Trainer</h2>
     <a style="width: 190px;" class="btn btn-success mb-3" href="../trainer/create">Tambah Trainer Baru</a>
