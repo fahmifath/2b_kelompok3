@@ -1,7 +1,6 @@
-<nav
-    class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="../home/index">GYM KITA</a>
+        <a class="navbar-brand" href="../home/index" style="text-shadow: black 0.1em 0.1em 0.2em; color: rgb(255, 255, 255);">GYM KITA</a>
         <button
             class="navbar-toggler"
             type="button"
@@ -12,7 +11,7 @@
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse text-right" id="navbarText">
+        <div class="collapse navbar-collapse w-100" id="navbarText">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" href="../home/index">Home</a>
