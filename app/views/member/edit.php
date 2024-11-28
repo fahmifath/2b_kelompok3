@@ -1,6 +1,6 @@
 <!-- app/views/member/edit.php -->
 <div class="container center mt-5" style="width: 700px;">
-    <h2 class="mt-5 text-center">Edit Member</h2>
+    <h2 class="mt-5 text-center pb-2 pt-5">Edit Member</h2>
     <form action="/member/update/<?php echo $member['id_member']; ?>" method="POST">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nama</label>
