@@ -13,8 +13,16 @@
         </div>
 
         <div class="mb-3">
-            <label for="pelatih" class="form-label">Pelatih:</label>
-            <input type="text" id="pelatih" name="pelatih" value="<?php echo $kelass['pelatih']; ?>" class="form-control" aria-describedby="emailHelp" required>
+            <td><label for="pelatih">Pelatih:</label></td>
+            <td>
+                <select name="pelatih" id="id_events" required class="form-control" aria-placeholder="Pilih pelatih">
+
+                    <option hidden value="<?= $kelass['id_trainer'] ?>"><?= $kelass['nama_trainer'] ?></option>
+                    <?php foreach ($trainers as $index): ?>
+                        <option value="<?= $index['id_trainer'] ?>"><?= $index['nama_trainer'] ?></option>
+                    <?php endforeach ?>
+                </select>
+            </td>
         </div>
 
         <div class="mb-3">

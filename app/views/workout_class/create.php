@@ -12,8 +12,16 @@
         </div>
         <div class="mb-3">
             <td><label for="pelatih">Pelatih:</label></td>
-            <td><input type="text" class="form-control" name="pelatih" id="pelatih" aria-describedby="emailHelp" required></td>
+            <td>
+                <select name="pelatih" id="id_events" required class="form-control" aria-placeholder="Pilih pelatih">
+                    <option value="" selected disabled hidden>Pilih pelatih</option>
+                    <?php foreach ($trainers as $index): ?>
+                        <option value="<?= $index['id_trainer'] ?>"><?= $index['nama_trainer'] ?></option>
+                    <?php endforeach ?>
+                </select>
+            </td>
         </div>
+
         <div class="mb-3">
             <label for="kuota">Kuota:</label>
             <input type="number" class="form-control" name="kuota" id="kuota" aria-describedby="emailHelp" required>
