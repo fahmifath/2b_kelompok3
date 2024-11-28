@@ -5,7 +5,7 @@
         <h3 class="display-1 fw-bold" style="text-shadow: black 0.1em 0.1em 0.2em; color: rgb(255, 255, 255);">Hai! Halo!</h3>
         <a href="#layanan">
             <button type="button" class="btn btn-danger btn-lg" >
-                Cek Layanan
+                Cek Layanan!!
             </button>
         </a>
     </div>
