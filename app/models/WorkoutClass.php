@@ -45,7 +45,7 @@ class WorkoutClass
     // Update kelas data by ID
     public function update($id_kelas, $data)
     {
-        $query = "UPDATE workout_classes SET nama_kelas = :nama_kelas, waktu = :waktu, pelatih = :pelatih, kuota = :kuota WHERE id_workout_class = :id_kelas";
+        $query = "UPDATE workout_classes SET nama_kelas = :nama_kelas, waktu = :waktu, id_trainer = :pelatih, kuota = :kuota WHERE id_workout_class = :id_kelas";
         $stmt = $this->db->prepare($query);
         $stmt->bindParam(':nama_kelas', $data['nama_kelas']);
         $stmt->bindParam(':waktu', $data['waktu']);
