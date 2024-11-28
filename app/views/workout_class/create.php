@@ -19,9 +19,9 @@
             <input type="number" class="form-control" name="kuota" id="kuota" aria-describedby="emailHelp" required>
         </div>
         <div class="mb-3 d-flex justify-content-between">
+            <a href="/workout_class/index" class="btn btn-primary">Back to List</a>
             <input type="hidden" name="id_kelas" id="id_kelas">
             <button type="submit" class="btn btn-success">Simpan</button>
-            <a href="/workout_class/index" class="btn btn-primary">Back to List</a>
         </div>
     </form>
 </div>
