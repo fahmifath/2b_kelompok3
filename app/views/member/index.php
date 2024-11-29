@@ -11,6 +11,7 @@
                 <th>Usia</th>
                 <th>Jenis kelamin</th>
                 <th>Paket langganan</th>
+                <th>Kelas</th>
                 <th style="width: 200px;" class="text-center">Aksi</th>
             </tr>
         </thead>
@@ -23,6 +24,7 @@
                 <td><?=htmlspecialchars($member['usia'])?></td>
                 <td><?=htmlspecialchars($member['jenis_kelamin'])?></td>
                 <td><?=htmlspecialchars($member['paket_langganan'])?></td>
+                <td><?=htmlspecialchars($member['nama_kelas'])?></td>
                 <td class="d-flex justify-content-center">
                     <a style="width: 70px;" class="btn btn-warning btn-sm me-2" href="../member/edit/<?php echo $member['id_member']; ?>">Edit</a>
                     <a style="width: 70px;" class="btn btn-danger btn-sm" href="../member/delete/<?php echo $member['id_member']; ?>" onclick="return confirm('Are you sure?')">Delete</a>

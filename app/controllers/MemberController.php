@@ -17,6 +17,7 @@ class MemberController {
     }
 
     public function create() {
+        $classes = $this->memberModel->getAllClasses();
         require_once '../app/views/member/create.php';
     }
 
@@ -25,11 +26,13 @@ class MemberController {
         $usia = $_POST['usia'];
         $jenis_kelamin = $_POST['jenis_kelamin'];
         $paket_langganan = $_POST['paket_langganan'];
-        $this->memberModel->add($nama_member, $usia, $jenis_kelamin, $paket_langganan);
+        $id_kelas = $_POST['kelas'];
+        $this->memberModel->add($nama_member, $usia, $jenis_kelamin, $paket_langganan, $id_kelas);
         header('Location: /member/index');
     }
     // Show the edit form with the user data
     public function edit($id) {
+        $classes = $this->memberModel->getAllClasses();
         $member = $this->memberModel->find($id); // Assume find() gets user by ID
         require_once __DIR__ . '/../views/member/edit.php';
     }
