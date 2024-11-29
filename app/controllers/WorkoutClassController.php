@@ -20,6 +20,8 @@ class WorkoutClassController
     public function create()
     {
         $trainers = $this->workoutClassModel->getAllTrainer();
+        $kelas = $this->workoutClassModel->getAllWorkoutClass();
+        $alat = $this->workoutClassModel->getAllEquipment();
         require_once '../app/views/workout_class/create.php';
     }
 
@@ -29,7 +31,8 @@ class WorkoutClassController
         $waktu = $_POST['waktu'];
         $pelatih = $_POST['pelatih'];
         $kuota = $_POST['kuota'];
-        $this->workoutClassModel->add($nama_kelas, $waktu, $pelatih, $kuota);
+        $alat = $_POST['alat'];
+        $this->workoutClassModel->add($nama_kelas, $waktu, $pelatih, $kuota, $alat);
         header('Location: /workout_class/index');
     }
     // Show the edit form with the kelas data
@@ -37,6 +40,7 @@ class WorkoutClassController
     {
         $kelass = $this->workoutClassModel->find($id_kelas); // Assume find() gets kelas by ID
         $trainers = $this->workoutClassModel->getAllTrainer();
+        $alat = $this->workoutClassModel->getAllEquipment();
         require_once __DIR__ . '/../views/workout_class/edit.php';
     }
 
