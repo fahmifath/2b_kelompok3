@@ -1,4 +1,5 @@
 <!-- app/views/member/create.php -->
+<?php require_once'../app/views/templates/nav.php' ?>
 <div class="container center mt-5" style="width: 700px;">
     <h2 class="mt-5 text-center pb-2 pt-5">Tambah Member Baru</h2>
     <form action="/member/store" method="POST">
@@ -34,6 +35,17 @@
                 <option value="Reguler">Reguler</option>
                 <option value="Premium">Premium</option>
             </select>
+        </div>
+        <div class="mb-3">
+            <td><label for="pelatih">Pilih kelas:</label></td>
+            <td>
+                <select name="kelas" id="id_events" required class="form-control" aria-placeholder="Pilih pelatih">
+                    <option value="" selected disabled hidden>Pilih kelas</option>
+                    <?php foreach ($classes as $index): ?>
+                        <option value="<?= $index['id_workout_class'] ?>"><?= $index['nama_kelas'] ?></option>
+                    <?php endforeach ?>
+                </select>
+            </td>
         </div>
         <div class="mb-3 d-flex justify-content-between">
             <a class="btn btn-primary" href="/member/index" style="width: 120px;">Back to List</a>
