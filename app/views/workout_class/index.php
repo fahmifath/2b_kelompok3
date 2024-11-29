@@ -1,7 +1,7 @@
 <!-- app/views/kelas/index.php -->
-
-<div class="container mt-5 pt-5">
-    <h2 class="text-center mt-4 pb-2" style="margin-top: 100px;">Daftar Kelas</h2>
+<?php require_once'../app/views/templates/nav.php' ?>
+<div class="container mt-5">
+    <h2 class="text-center mt-5 pb-2 pt-5" style="margin-top: 100px;">Daftar Kelas</h2>
     <a href="/workout_class/create" class="btn btn-success mb-3">Tambah Kelas Baru</a>
     <table class="table table-striped table-bordered table-hover">
         <thead>
@@ -21,7 +21,7 @@
                     <td><?= $no; ?></td>
                     <td><?= htmlspecialchars($class['nama_kelas']) ?></td>
                     <td><?= htmlspecialchars($class['waktu']) ?></td>
-                    <td><?= htmlspecialchars($class['pelatih']) ?></td>
+                    <td><?= htmlspecialchars($class['nama_trainer']) ?></td>
                     <td><?= htmlspecialchars($class['kuota']) ?></td>
                     <td class="d-flex justify-content-center">
                         <a style="width: 70px;" class="btn btn-warning btn-sm me-2" href="/workout_class/edit/<?php echo $class['id_workout_class']; ?>">Edit</a>

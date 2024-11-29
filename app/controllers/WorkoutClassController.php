@@ -2,24 +2,29 @@
 // app/controllers/kelasController.php
 require_once '../app/models/WorkoutClass.php';
 
-class WorkoutClassController {
+class WorkoutClassController
+{
     private $workoutClassModel;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->workoutClassModel = new WorkoutClass();
     }
 
-    public function index() {
+    public function index()
+    {
         $kelas = $this->workoutClassModel->getAllWorkoutClass();
         require_once '../app/views/workout_class/index.php';
-
     }
 
-    public function create() {
+    public function create()
+    {
+        $trainers = $this->workoutClassModel->getAllTrainer();
         require_once '../app/views/workout_class/create.php';
     }
 
-    public function store() {
+    public function store()
+    {
         $nama_kelas = $_POST['nama_kelas'];
         $waktu = $_POST['waktu'];
         $pelatih = $_POST['pelatih'];
@@ -28,13 +33,16 @@ class WorkoutClassController {
         header('Location: /workout_class/index');
     }
     // Show the edit form with the kelas data
-    public function edit($id_kelas) {
+    public function edit($id_kelas)
+    {
         $kelass = $this->workoutClassModel->find($id_kelas); // Assume find() gets kelas by ID
+        $trainers = $this->workoutClassModel->getAllTrainer();
         require_once __DIR__ . '/../views/workout_class/edit.php';
     }
 
     // Process the update request
-    public function update($id_kelas, $data) {
+    public function update($id_kelas, $data)
+    {
         $updated = $this->workoutClassModel->update($id_kelas, $data);
         if ($updated) {
             header("Location: /workout_class/index"); // Redirect to kelas list
@@ -44,7 +52,8 @@ class WorkoutClassController {
     }
 
     // Process delete request
-    public function delete($id_kelas) {
+    public function delete($id_kelas)
+    {
         $deleted = $this->workoutClassModel->delete($id_kelas);
         if ($deleted) {
             header("Location: /workout_class/index"); // Redirect to kelas list
