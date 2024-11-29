@@ -30,6 +30,7 @@ class MemberController {
     }
     // Show the edit form with the user data
     public function edit($id) {
+        
         $member = $this->memberModel->find($id); // Assume find() gets user by ID
         require_once __DIR__ . '/../views/member/edit.php';
     }
