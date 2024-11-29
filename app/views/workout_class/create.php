@@ -1,4 +1,5 @@
 <!-- app/views/kelas/create.php -->
+<?php require_once'../app/views/templates/nav.php' ?>
 <div class="container center mt-5" style="width: 700px;">
     <h2 class="mt-5 text-center pb-2 pt-5">Tambah Kelas Baru</h2>
     <form action="/workout_class/store" method="POST">
